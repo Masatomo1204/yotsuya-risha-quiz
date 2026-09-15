@@ -198,9 +198,15 @@ function renderQuestion() {
   els.explanationBlock.hidden = !q.explanation;
 
   els.hintText.hidden = true;
+
+  // v1.0.2: force the initial visibility in JS.
+  // This avoids browser/CSS conflicts around the HTML hidden attribute.
   els.answerArea.hidden = true;
+  els.answerArea.style.display = "none";
   els.judgeArea.hidden = true;
+  els.judgeArea.style.display = "none";
   els.showAnswerBtn.hidden = false;
+  els.showAnswerBtn.style.display = "";
 
   const saved = state.progress[q.id];
   if (saved) {
@@ -214,9 +220,13 @@ function renderQuestion() {
 }
 
 function showAnswer() {
+  // v1.0.2: explicitly reveal the answer and judgement controls.
   els.answerArea.hidden = false;
+  els.answerArea.style.display = "block";
   els.judgeArea.hidden = false;
+  els.judgeArea.style.display = "grid";
   els.showAnswerBtn.hidden = true;
+  els.showAnswerBtn.style.display = "none";
 }
 
 function loadProgress() {

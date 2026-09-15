@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>四谷大塚 理社一問一答</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">YOTSUYA RISHA QUIZ</p>
+        <h1>理社 一問一答</h1>
+      </div>
+      <button id="resetProgressBtn" class="ghost-button" type="button">進捗リセット</button>
+    </header>
+
+    <section class="panel filters">
+      <div class="segmented" role="group" aria-label="教科">
+        <button class="segment active" data-subject="all" type="button">すべて</button>
+        <button class="segment" data-subject="science" type="button">理科</button>
+        <button class="segment" data-subject="social" type="button">社会</button>
+      </div>
+
+      <div class="filter-row">
+        <label>
+          <span>回</span>
+          <select id="lessonFilter">
+            <option value="all">すべて</option>
+          </select>
+        </label>
+
+        <label>
+          <span>状態</span>
+          <select id="statusFilter">
+            <option value="all">すべて</option>
+            <option value="new">未回答</option>
+            <option value="good">できた</option>
+            <option value="retry">要復習</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="summary-grid" aria-label="学習状況">
+      <article class="summary-card">
+        <span>対象問題</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>できた</span>
+        <strong id="goodCount">0</strong>
+      </article>
+      <article class="summary-card">
+        <span>要復習</span>
+        <strong id="retryCount">0</strong>
+      </article>
+    </section>
+
+    <section id="quizCard" class="panel quiz-card" hidden>
+      <div class="question-meta">
+        <span id="subjectBadge" class="badge">理科</span>
+        <span id="lessonLabel"></span>
+        <span id="knowledgeLabel"></span>
+      </div>
+
+      <div class="question-wrap">
+        <p class="question-number" id="questionNumber"></p>
+        <h2 id="questionText"></h2>
+        <p id="hintText" class="hint" hidden></p>
+      </div>
+
+      <div id="answerArea" class="answer-area" hidden>
+        <p class="answer-label">答え</p>
+        <p id="answerText" class="answer-text"></p>
+        <div id="explanationBlock" class="explanation-block" hidden>
+          <p class="answer-label">説明</p>
+          <p id="explanationText"></p>
+        </div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="showAnswerBtn" class="primary-button" type="button">答えを見る</button>
+        <button id="showHintBtn" class="secondary-button" type="button">ヒント</button>
+      </div>
+
+      <div id="judgeArea" class="judge-area" hidden>
+        <button class="judge good" data-judge="good" type="button">できた</button>
+        <button class="judge retry" data-judge="retry" type="button">要復習</button>
+      </div>
+
+      <div class="pager">
+        <button id="prevBtn" class="ghost-button" type="button">← 前へ</button>
+        <span id="pageIndicator">0 / 0</span>
+        <button id="nextBtn" class="ghost-button" type="button">次へ →</button>
+      </div>
+    </section>
+
+    <section id="emptyState" class="panel empty-state">
+      <p>読み込み中です…</p>
+    </section>
+
+    <footer class="footer-note">
+      <p>この版はサンプル問題で動作します。後からSupabaseの問題データへ差し替えられます。</p>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

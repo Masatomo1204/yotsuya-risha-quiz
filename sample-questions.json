@@ -1,0 +1,83 @@
+{
+  "schema_version": "daily-risha-question-data-v1",
+  "questions": [
+    {
+      "id": "SCI-5-01-001",
+      "subject": "science",
+      "lesson": "第1回",
+      "knowledge_label": "植物",
+      "knowledge_element_id": "KE-SCI-PLANT-001",
+      "question": "植物の葉で、日光のエネルギーを使って養分をつくるはたらきを何といいますか？",
+      "answer": "光合成",
+      "hint": "葉・日光・二酸化炭素が関係します。",
+      "explanation": "植物は葉で日光のエネルギーを利用し、水と二酸化炭素から養分をつくります。",
+      "probe_type": "text",
+      "runtime_visual_dependency": "NONE"
+    },
+    {
+      "id": "SCI-5-01-002",
+      "subject": "science",
+      "lesson": "第1回",
+      "knowledge_label": "植物",
+      "knowledge_element_id": "KE-SCI-PLANT-002",
+      "question": "光合成によって植物が空気中から取り入れる気体は何ですか？",
+      "answer": "二酸化炭素",
+      "hint": "人がはく息にも多く含まれます。",
+      "explanation": "光合成では二酸化炭素を取り入れ、酸素を放出します。",
+      "probe_type": "text",
+      "runtime_visual_dependency": "NONE"
+    },
+    {
+      "id": "SCI-5-02-001",
+      "subject": "science",
+      "lesson": "第2回",
+      "knowledge_label": "天気",
+      "knowledge_element_id": "KE-SCI-WEATHER-001",
+      "question": "あたたかい空気が上昇すると、一般に気圧は高くなりますか、低くなりますか？",
+      "answer": "低くなる",
+      "hint": "上昇気流と低気圧の関係を思い出しましょう。",
+      "explanation": "空気が上昇する場所では地表付近の空気が少なくなり、気圧は低くなります。",
+      "probe_type": "causal",
+      "runtime_visual_dependency": "NONE"
+    },
+    {
+      "id": "SOC-5-01-001",
+      "subject": "social",
+      "lesson": "第1回",
+      "knowledge_label": "日本の国土",
+      "knowledge_element_id": "KE-SOC-LAND-001",
+      "question": "日本で最も面積の大きい都道府県はどこですか？",
+      "answer": "北海道",
+      "hint": "日本の北にある大きな島です。",
+      "explanation": "北海道は日本の都道府県の中で最も面積が大きいです。",
+      "probe_type": "text",
+      "runtime_visual_dependency": "NONE"
+    },
+    {
+      "id": "SOC-5-01-002",
+      "subject": "social",
+      "lesson": "第1回",
+      "knowledge_label": "日本の国土",
+      "knowledge_element_id": "KE-SOC-LAND-002",
+      "question": "日本の国土の約4分の3を占める地形は何ですか？",
+      "answer": "山地・丘陵地",
+      "hint": "平地よりも多い地形です。",
+      "explanation": "日本は山が多く、山地と丘陵地が国土の大部分を占めています。",
+      "probe_type": "text",
+      "runtime_visual_dependency": "NONE"
+    },
+    {
+      "id": "SOC-5-02-001",
+      "subject": "social",
+      "lesson": "第2回",
+      "knowledge_label": "農業",
+      "knowledge_element_id": "KE-SOC-AGRI-001",
+      "question": "米づくりで、苗を水田に植え替える作業を何といいますか？",
+      "answer": "田植え",
+      "hint": "春から初夏に行う代表的な作業です。",
+      "explanation": "育てた苗を水田に植え替える作業を田植えといいます。",
+      "probe_type": "text",
+      "runtime_visual_dependency": "NONE"
+    }
+  ]
+}
